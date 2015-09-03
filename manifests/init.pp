@@ -3,10 +3,10 @@
 # Examples
 #
 #   include hipchat
-class hipchat {
+class hipchat ($version = '3.3.2-198') {
   package { 'HipChat':
     provider => 'compressed_app',
-    source   => 'https://www.hipchat.com/downloads/latest/mac',
+    source   => "https://s3.amazonaws.com/downloads.hipchat.com/osx/HipChat-${version}.zip",
     flavor   => 'zip',
   }
 }
